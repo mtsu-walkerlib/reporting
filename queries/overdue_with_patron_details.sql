@@ -1,4 +1,6 @@
 --metadb:function overdue_with_patron_details
+DROP FUNCTION IF EXISTS overdue_with_patron_details;
+
 CREATE FUNCTION overdue_with_patron_details()
 	
 returns table
