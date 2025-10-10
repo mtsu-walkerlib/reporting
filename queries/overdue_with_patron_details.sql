@@ -1,3 +1,23 @@
+--metadb:function overdue_with_patron_details
+CREATE FUNCTION overdue_with_patron_details()
+	
+returns table
+(
+	due_date DATE,
+	check_out_date DATE,
+	item_barcode TEXT,
+	patron_first_name TEXT,
+	patron_last_name TEXT,
+	patron_barcode TEXT,
+	patron_group_name TEXT,
+	patron_email TEXT,
+	item_effective_call_number TEXT,
+	item_title TEXT,
+	item_status TEXT,
+	location_effective TEXT
+)
+as
+$$
 SELECT cast(li.loan_due_date AS DATE) AS due_date,
 	   cast(li.loan_date as DATE) as check_out_date,
         ihi.barcode AS item_barcode,
@@ -20,3 +40,5 @@ WHERE li.loan_status = 'Open'
         AND li.patron_group_name NOT IN ('ill')
         AND ie.discovery_suppress = 'False'
 order by li.loan_due_date desc;
+$$
+language sql stable;
