@@ -1,0 +1,7 @@
+{
+    "displayName": "Tech Services special printing fee/fine report",
+    "description": "This report generates fee/fine data on Walker Library special printing services",
+    "instructions": "No inputs needed.",
+    "parameters": [
+    ]
+}
