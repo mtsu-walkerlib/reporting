@@ -1,0 +1,7 @@
+{
+    "displayName": "InHouse Check In",
+    "description": "This report shows items that have been checked in while still Available in FOLIO",
+    "instructions": "No inputs needed.",
+    "parameters": [
+    ]
+}
