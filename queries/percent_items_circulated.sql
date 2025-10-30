@@ -5,7 +5,7 @@ CREATE FUNCTION percent_items_circulated()
 
 returns table
 (
-  loan_percentage TEXT
+  Loan Percentage TEXT
 )
 as
 $$
