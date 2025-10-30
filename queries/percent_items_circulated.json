@@ -1,0 +1,7 @@
+{
+    "displayName": "Percent of items circulated",
+    "description": "This report provides a rough estimate of the proportion of the collection that has ever been loaned",
+    "instructions": "No inputs needed.",
+    "parameters": [
+    ]
+}
