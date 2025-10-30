@@ -1,3 +1,5 @@
+--Needs more work. The user is still hardcoded on line 21, this needs to be an option in the json
+
 --metadb:function user_bib_activity
 DROP FUNCTION IF EXISTS user_bib_activity;
 
