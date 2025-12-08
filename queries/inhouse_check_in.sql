@@ -17,10 +17,10 @@ as
 $$
 SELECT
     cit.item_id                                AS "ItemUUID",
-    cit.occurred_date_time::date               AS "Date",
+    cit.occurred_date_time::date::text         AS "Date",
     i.barcode                                  AS "Barcode",
     l.name                                     AS "Location",
-    i.item_level_call_number                    AS "Call_Number",
+    i.item_level_call_number                   AS "Call_Number",
     inst.title                                 AS "Title",
     u.username                                 AS "Checking_In_User"
 FROM folio_circulation.check_in__t AS cit
