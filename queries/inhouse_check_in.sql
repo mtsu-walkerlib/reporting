@@ -17,7 +17,7 @@ as
 $$
 SELECT
     cit.item_id                                AS "ItemUUID",
-    cit.occurred_date_time::date::text         AS "Date",
+    cit.occurred_date_time::date               AS "Date",
     i.barcode                                  AS "Barcode",
     l.name                                     AS "Location",
     i.item_level_call_number                   AS "Call_Number",
