@@ -21,7 +21,7 @@ returns table
 )
 as
 $$
-SELECT  li.loan_due_date::date::text AS due_date,
+SELECT cast(li.loan_due_date as DATE) AS due_date,
 	   cast(li.loan_date as DATE) as check_out_date,
         ihi.barcode AS item_barcode,
 		ug.username as patron_username,
