@@ -42,6 +42,6 @@ LEFT JOIN folio_derived.instance_contributors ic
     ON ic.instance_id = ine.instance_id
     AND ic.contributor_is_primary = 'true'
 where cri.name is not null 
-order by course_title;
+order by crc.description;
 $$
 LANGUAGE SQL STABLE;
