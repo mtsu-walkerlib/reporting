@@ -1,0 +1,7 @@
+{
+    "displayName": "Courses Items Description",
+    "description": "This report shows items from Courses with some descriptive values for book and course",
+    "instructions": "No inputs needed.",
+    "parameters": [
+    ]
+}
