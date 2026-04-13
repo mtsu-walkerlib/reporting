@@ -14,7 +14,7 @@ returns table
   Edition TEXT,
   Primary_Contributor TEXT,
   Publisher TEXT,
-  Date_of_Pulication DATE
+  Date_of_Pulication TEXT
 )
 as
 $$
