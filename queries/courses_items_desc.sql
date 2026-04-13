@@ -27,8 +27,8 @@ SELECT
 	ine.title as book_title,
 	ed.edition as edition,
 	ic.contributor_name as primary_contributor,
-	ip.publisher,
-	ip.date_of_publication
+	ip.publisher as publisher,
+	ip.date_of_publication as date_of_publication
 FROM folio_courses.coursereserves_reserves__t AS crr
 LEFT JOIN folio_courses.coursereserves_courses__t AS crc ON crc.course_listing_id = crr.course_listing_id
 left join folio_courses.coursereserves_instructors__t as cri on cri.course_listing_id = crc.course_listing_id
