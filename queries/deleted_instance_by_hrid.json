@@ -1,7 +1,7 @@
 {
   "displayName": "Deleted Instance Lookup by HRID",
   "description": "Retrieve deleted inventory instance information from audit_instance__ using an HRID.",
-  "query": "SELECT * FROM local.deleted_instance_by_hrid(:hrid);",
+  "query": "SELECT * FROM deleted_instance_by_hrid(:hrid);",
   "parameters": [
     {
       "name": "hrid",
