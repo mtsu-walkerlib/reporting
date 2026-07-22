@@ -2,7 +2,7 @@
 DROP FUNCTION IF EXISTS deleted_instance_by_hrid(text);
 
 CREATE OR REPLACE FUNCTION deleted_instance_by_hrid(
-    p_hrid text
+    hrid text
 )
 RETURNS TABLE (
     hrid text,
