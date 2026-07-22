@@ -1,7 +1,7 @@
---metadb:function overdue_with_patron_details
-DROP FUNCTION IF EXISTS local.deleted_instance_by_hrid(text);
+--metadb:function folio_inventory.deleted_instance_by_hrid
+DROP FUNCTION IF EXISTS folio_inventory.deleted_instance_by_hrid(text);
 
-CREATE OR REPLACE FUNCTION local.deleted_instance_by_hrid(
+CREATE OR REPLACE FUNCTION folio_inventory.deleted_instance_by_hrid(
     hrid text
 )
 RETURNS TABLE (
