@@ -1,6 +1,7 @@
-DROP FUNCTION IF EXISTS local.deleted_instance_by_hrid(text);
+--metadb:function overdue_with_patron_details
+DROP FUNCTION IF EXISTS deleted_instance_by_hrid(text);
 
-CREATE OR REPLACE FUNCTION local.deleted_instance_by_hrid(
+CREATE OR REPLACE FUNCTION deleted_instance_by_hrid(
     p_hrid text
 )
 RETURNS TABLE (
