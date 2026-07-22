@@ -1,0 +1,13 @@
+{
+    "displayName": "Deleted instance identifiers by HRID",
+    "description": "Looks up deleted (audit) instance records by HRID and returns their title and identifiers, along with the date they were deleted. Enter one or more HRIDs separated by commas.",
+    "instructions": "Enter one HRID, or multiple HRIDs separated by commas (e.g. mig00005921542, mig00005925570).",
+    "parameters": [
+        {
+            "name": "hrids",
+            "displayName": "HRID(s)",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
