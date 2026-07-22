@@ -34,4 +34,3 @@ AS $$
     ORDER BY
         ai.jsonb->>'createdDate' DESC;
 $$;
-``
