@@ -1,7 +1,7 @@
 {
     "displayName": "Deleted instance identifiers by UUID",
     "description": "Looks up deleted (audit) instance records by instance UUID and returns their HRID, title and identifiers, along with the date they were deleted. Enter one or more UUIDs separated by commas.",
-    "instructions": "Enter one instance UUID, or multiple UUIDs separated by commas.",
+    "instructions": "Enter one instance UUID, or multiple UUIDs separated by commas (e.g. UUID1, UUID2)..",
     "parameters": [
         {
             "name": "uuids",
