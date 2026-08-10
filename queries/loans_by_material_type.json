@@ -1,0 +1,19 @@
+{
+    "displayName": "Loans by Material Type",
+    "description": "Counts loans checked out during a specified date range, grouped by item material type.",
+    "instructions": "Choose a start date and an end date. Loans with a loan date on or after the start date and before the end date are included (the end date is exclusive).",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start date",
+            "type": "date",
+            "required": true
+        },
+        {
+            "name": "end_date",
+            "displayName": "End date (exclusive)",
+            "type": "date",
+            "required": true
+        }
+    ]
+}
