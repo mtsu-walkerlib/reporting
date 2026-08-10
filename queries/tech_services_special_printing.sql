@@ -33,9 +33,6 @@ latest_ft AS (
         account_id,
         comments
     FROM folio_feesfines.feefineactions__t
-    -- NOTE: consider adding a second ORDER BY key here (e.g. the action's
-    -- date/timestamp column) so "latest" is actually the most recent
-    -- comment rather than an arbitrary row per account_id.
     ORDER BY account_id DESC
 )
 SELECT
