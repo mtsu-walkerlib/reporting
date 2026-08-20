@@ -1,7 +1,19 @@
 {
     "displayName": "InHouse Check In",
     "description": "This report shows items that have been checked in while still Available in FOLIO",
-    "instructions": "No inputs needed.",
+    "instructions": "Select a start and end date. Recommend 1-2 months per report - large reports may not download.",
     "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start Date",
+            "type": "date",
+            "description": "Earliest check-in date to include"
+        },
+        {
+            "name": "end_date",
+            "displayName": "End Date",
+            "type": "date",
+            "description": "Latest check-in date to include (inclusive)"
+        }
     ]
 }
