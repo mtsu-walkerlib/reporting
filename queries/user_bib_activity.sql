@@ -1,10 +1,6 @@
---Needs more work. The user is still hardcoded on line 21, this needs to be an option in the json
-
 --metadb:function user_bib_activity
 DROP FUNCTION IF EXISTS user_bib_activity;
-
-CREATE FUNCTION user_bib_activity()
-
+CREATE FUNCTION user_bib_activity(mnumber TEXT)
 RETURNS TABLE (
   month TEXT,
   instances_created INTEGER,
@@ -18,10 +14,9 @@ AS $$
 WITH su AS (
   SELECT id, username
   FROM folio_users.users__t
-  WHERE username = 'M01408836'
+  WHERE username = mnumber
 ),
 all_actions AS (
-
   -- Instances created (keep as-is)
   SELECT
     su.username,
@@ -29,7 +24,6 @@ all_actions AS (
     'instances_created' AS action
   FROM su
   JOIN instance_ext i ON i.created_by_user_id = su.id
-
   UNION ALL
   -- Instances modified (from folio_inventory.instance__)
   SELECT
@@ -39,7 +33,6 @@ all_actions AS (
   FROM su
   JOIN folio_inventory.instance__ ii
     ON (ii.jsonb -> 'metadata' ->> 'updatedByUserId') = su.id::text
-
   UNION ALL
   -- Holdings created (keep as-is)
   SELECT
@@ -48,7 +41,6 @@ all_actions AS (
     'holdings_created' AS action
   FROM su
   JOIN holdings_ext h ON h.created_by_user_id = su.id
-
   UNION ALL
   -- Holdings modified (from folio_inventory.holdings_record__)
   SELECT
@@ -58,7 +50,6 @@ all_actions AS (
   FROM su
   JOIN folio_inventory.holdings_record__ hh
     ON (hh.jsonb -> 'metadata' ->> 'updatedByUserId') = su.id::text
-
   UNION ALL
   -- Items created (keep as-is)
   SELECT
@@ -67,7 +58,6 @@ all_actions AS (
     'items_created' AS action
   FROM su
   JOIN item_ext it ON it.created_by = su.id
-
   UNION ALL
   -- Items modified (from folio_inventory.item__)
   SELECT
@@ -89,5 +79,5 @@ SELECT
 FROM all_actions
 GROUP BY ROLLUP(month)
 ORDER BY month;
-$$ 
+$$
 LANGUAGE sql STABLE;
