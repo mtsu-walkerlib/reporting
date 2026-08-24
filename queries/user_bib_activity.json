@@ -1,0 +1,13 @@
+{
+    "displayName": "User Bib Activity",
+    "description": "Monthly counts of instance, holdings, and item records created or modified by a specific user, identified by M-number",
+    "instructions": "Enter your Mnumber to see bib record activity by month.",
+    "parameters": [
+        {
+            "name": "mnumber",
+            "displayName": "M-Number",
+            "type": "text",
+            "description": "The user's M-number (username), e.g. M01408836"
+        }
+    ]
+}
