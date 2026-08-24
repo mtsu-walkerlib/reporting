@@ -1,6 +1,6 @@
 --metadb:function techmakerspace_feesfines
-DROP FUNCTION IF EXISTS tech_makerspace_feesfines;
-CREATE FUNCTION tech_makerspace_feesfines(start_date DATE, end_date DATE)
+DROP FUNCTION IF EXISTS techmakerspace_feesfines;
+CREATE FUNCTION techmakerspace_feesfines(start_date DATE, end_date DATE)
 returns table
 (
   User_UUID TEXT,
