@@ -38,8 +38,8 @@ latest_ft AS (
 SELECT
     acc.user_id,
     acc.location,
-    cast(acc.amount as TEXT),
-    cast(acc.remaining as TEXT),
+    cast(acc.amount as NUMERIC),
+    cast(acc.remaining as NUMERIC),
     acc.fee_fine_type,
     acc.fee_fine_owner,
     acc.title,
