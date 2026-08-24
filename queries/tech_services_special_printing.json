@@ -1,7 +1,7 @@
 {
     "displayName": "Tech Services Special Printing",
     "description": "Fees and fines (special printing), filtered by creation date range",
-    "instructions": "Select a date range.",
+    "instructions": "Select a date range. Rows are limited to 1000 and may not download successfully at that size.",
     "parameters": [
         {
             "name": "start_date",
