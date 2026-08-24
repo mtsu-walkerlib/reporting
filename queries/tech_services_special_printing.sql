@@ -5,8 +5,8 @@ returns table
 (
     user_id TEXT,
     location TEXT,
-    amount TEXT,
-    remaining TEXT,
+    amount NUMERIC,
+    remaining NUMERIC,
     fee_fine_type TEXT,
     fee_fine_owner TEXT,
     title TEXT,
