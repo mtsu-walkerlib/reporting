@@ -1,6 +1,19 @@
 {
-    "displayName": "Tech Services Special Printing Fees/Fines",
-    "description": "Lists fee/fine account records owned by Tech&MakerSpace, with the most recent action, comment, and payment status per account.",
-    "instructions": "This report has no parameters. Run it to see all current Tech&MakerSpace fee/fine accounts, most recently created first.",
-    "parameters": []
+    "displayName": "Tech Services Special Printing",
+    "description": "Fees and fines for the Tech&MakerSpace owner (special printing), filtered by creation date range",
+    "instructions": "Select a start and end date.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start Date",
+            "type": "date",
+            "description": "Earliest fee/fine creation date to include"
+        },
+        {
+            "name": "end_date",
+            "displayName": "End Date",
+            "type": "date",
+            "description": "Latest fee/fine creation date to include (inclusive)"
+        }
+    ]
 }
