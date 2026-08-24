@@ -23,7 +23,7 @@ all_actions AS (
     date_trunc('month', i.record_created_date::timestamp)::date AS month,
     'instances_created' AS action
   FROM su
-  JOIN instance_ext i ON i.created_by_user_id = su.id
+  JOIN folio_derived.instance_ext i ON i.created_by_user_id = su.id
   UNION ALL
   -- Instances modified (from folio_inventory.instance__)
   SELECT
@@ -40,7 +40,7 @@ all_actions AS (
     date_trunc('month', h.created_date::timestamp)::date AS month,
     'holdings_created' AS action
   FROM su
-  JOIN holdings_ext h ON h.created_by_user_id = su.id
+  JOIN folio_derived.holdings_ext h ON h.created_by_user_id = su.id
   UNION ALL
   -- Holdings modified (from folio_inventory.holdings_record__)
   SELECT
@@ -57,7 +57,7 @@ all_actions AS (
     date_trunc('month', it.created_date::timestamp)::date AS month,
     'items_created' AS action
   FROM su
-  JOIN item_ext it ON it.created_by = su.id
+  JOIN folio_derived.item_ext it ON it.created_by = su.id
   UNION ALL
   -- Items modified (from folio_inventory.item__)
   SELECT
