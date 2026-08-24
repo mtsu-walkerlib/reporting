@@ -1,7 +1,7 @@
 {
     "displayName": "Tech Services Special Printing",
-    "description": "Fees and fines for the Tech&MakerSpace owner (special printing), filtered by creation date range",
-    "instructions": "Select a start and end date.",
+    "description": "Fees and fines (special printing), filtered by creation date range",
+    "instructions": "Select a date range.",
     "parameters": [
         {
             "name": "start_date",
