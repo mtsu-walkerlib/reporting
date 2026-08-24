@@ -1,6 +1,6 @@
 --metadb:function tech_services_special_printing
 DROP FUNCTION IF EXISTS tech_services_special_printing;
-CREATE FUNCTION tech_services_special_printing()
+CREATE FUNCTION tech_services_special_printing(start_date DATE, end_date DATE)
 returns table
 (
     user_id TEXT,
@@ -59,6 +59,8 @@ LEFT JOIN folio_feesfines.accounts AS raw
     ON raw.id = acc.id
 WHERE
     acc.fee_fine_owner = 'Tech&MakerSpace'
+    AND (raw.jsonb -> 'metadata' ->> 'createdDate')::DATE >= start_date
+    AND (raw.jsonb -> 'metadata' ->> 'createdDate')::DATE <= end_date
 ORDER BY
     created_date desc
 $$
