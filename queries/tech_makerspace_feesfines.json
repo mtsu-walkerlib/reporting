@@ -1,0 +1,19 @@
+{
+    "displayName": "Tech & MakerSpace Fees/Fines",
+    "description": "Fees and fines for the Tech&MakerSpace owner, excluding waived and cancelled items.",
+    "instructions": "Select a date range. The report will include fees/fines created on or between those dates.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start Date",
+            "type": "date",
+            "description": "Earliest fee/fine creation date to include"
+        },
+        {
+            "name": "end_date",
+            "displayName": "End Date",
+            "type": "date",
+            "description": "Latest fee/fine creation date to include (inclusive)"
+        }
+    ]
+}
